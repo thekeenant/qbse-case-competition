@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:qbse/analytics.dart';
-import 'package:qbse/bank.dart';
-import 'package:qbse/home.dart';
-import 'package:qbse/profit.dart';
-import 'package:qbse/splash.dart';
-import 'package:qbse/taxes.dart';
-import 'package:qbse/transactions.dart';
+import 'package:qbse/pages/analytics.dart';
+import 'package:qbse/pages/bank.dart';
+import 'package:qbse/pages/home.dart';
+import 'package:qbse/pages/settings.dart';
+import 'package:qbse/pages/splash.dart';
+import 'package:qbse/pages/taxes.dart';
+import 'package:qbse/pages/taxes_month.dart';
+import 'package:qbse/pages/transactions.dart';
+import 'package:qbse/pages/vehicle.dart';
 
 void main() => runApp(new MyApp());
 
@@ -20,8 +22,11 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/transactions': (_) => new TransactionPage(),
-        '/profit': (_) => new ProfitPage(),
+//        '/profit': (_) => new ProfitPage(),
         '/banks': (_) => new BankPage(),
+        '/vehicle': (_) => new VehiclePage(),
+        '/taxmonth': (_) => new TaxMonthPage(),
+        '/settings': (_) => new SettingsPage(),
         '/home': (_) => new HomePage(),
         '/analytics': (_) => new AnalyticsPage(),
         '/taxes': (_) => new TaxesPage(),

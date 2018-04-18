@@ -1,4 +1,5 @@
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:fcharts/fcharts.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -141,4 +142,287 @@ class LinearSales {
   final double value;
 
   LinearSales(this.hour, this.value);
+}
+
+
+class ProfitChart extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new ChartDataView(
+      chartPadding: new EdgeInsets.fromLTRB(40.0, 20.0, 20.0, 40.0),
+      decor: new ChartDecor(
+        axes: [
+          new ChartAxisData(
+            position: ChartPosition.left,
+            offset: 0.0,
+            ticks: [
+              new AxisTickData(
+                value: 0.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$0'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.2,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$10'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.4,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$20'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.6,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$30'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.8,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$40'),
+                ],
+              ),
+              new AxisTickData(
+                value: 1.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$50'),
+                ],
+              ),
+            ],
+          ),
+          new ChartAxisData(
+            position: ChartPosition.bottom,
+            offset: 0.0,
+            ticks: [
+              new AxisTickData(
+                value: 0.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '7:00pm'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.2,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '8:00pm'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.4,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '9:00pm'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.6,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '10:00pm'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.8,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '11:00pm'),
+                ],
+              ),
+              new AxisTickData(
+                value: 1.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '12:00am'),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+      charts: [
+        new LineChartData(
+          points: [
+            new LinePointData(x: 0.0, value: 0.0),
+            new LinePointData(x: 0.1, value: 5.2),
+            new LinePointData(x: 0.2, value: 12.5),
+            new LinePointData(x: 0.3, value: 15.5),
+            new LinePointData(x: 0.4, value: 12.5),
+            new LinePointData(x: 0.5, value: 20.5),
+            new LinePointData(x: 0.6, value: 30.5),
+            new LinePointData(x: 0.7, value: 28.5),
+            new LinePointData(x: 0.8, value: 38.5),
+            new LinePointData(x: 0.9, value: 45.5),
+            new LinePointData(x: 1.0, value: 40.5),
+          ],
+          range: new Range(0.0, 50.0),
+          stroke: new PaintOptions.stroke(color: Colors.green, strokeWidth: 2.0),
+        ),
+      ],
+    );
+  }
+}
+
+
+class ReflectionChart extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new ChartDataView(
+      animationDuration: const Duration(seconds: 0),
+      chartPadding: new EdgeInsets.fromLTRB(40.0, 20.0, 20.0, 40.0),
+      decor: new ChartDecor(
+        axes: [
+          new ChartAxisData(
+            position: ChartPosition.left,
+            offset: 0.0,
+            ticks: [
+              new AxisTickData(
+                value: 0.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$0'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.2,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$100'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.4,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$200'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.6,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$300'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.8,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$400'),
+                ],
+              ),
+              new AxisTickData(
+                value: 1.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: '\$500'),
+                ],
+              ),
+            ],
+          ),
+          new ChartAxisData(
+            position: ChartPosition.bottom,
+            offset: 0.0,
+            ticks: [
+              new AxisTickData(
+                value: 0.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'Jan'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.2,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'Mar'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.4,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'May'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.6,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'Jun'),
+                ],
+              ),
+              new AxisTickData(
+                value: 0.8,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'Sept'),
+                ],
+              ),
+              new AxisTickData(
+                value: 1.0,
+                width: 0.2,
+                labelers: [
+                  new NotchTickLabeler(),
+                  new TextTickLabeler(text: 'Dec'),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+      charts: [
+        new LineChartData(
+          points: [
+            new LinePointData(x: 0.0, value: 0.0),
+            new LinePointData(x: 0.1, value: 5.2),
+            new LinePointData(x: 0.2, value: 12.5),
+            new LinePointData(x: 0.3, value: 15.5),
+            new LinePointData(x: 0.4, value: 16.5),
+            new LinePointData(x: 0.5, value: 18.5),
+            new LinePointData(x: 0.6, value: 28.5),
+            new LinePointData(x: 0.7, value: 35.5),
+            new LinePointData(x: 0.8, value: 62.5),
+            new LinePointData(x: 0.9, value: 92.5),
+            new LinePointData(x: 1.0, value: 100.5),
+          ],
+          range: new Range(0.0, 120.0),
+          stroke: new PaintOptions.stroke(color: Colors.green, strokeWidth: 2.0),
+        ),
+      ],
+    );
+  }
 }
