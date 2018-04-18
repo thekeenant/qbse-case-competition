@@ -17,8 +17,8 @@ class _VehiclePageState extends State<VehiclePage> {
   @override
   Widget build(BuildContext context) {
     final showInfo = dropdown1 > 0 && dropdown2 > 0 && dropdown3 > 0;
-    final str1 = showInfo ? '\$' : 'TBD';
-    final str2 = showInfo ? '\$' : 'TBD';
+    final str1 = '\$0.46';
+    final str2 = showInfo ? '\$0.56' : 'TBD';
 
     return new Scaffold(
       appBar: new AppBar(

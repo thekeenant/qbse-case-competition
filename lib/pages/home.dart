@@ -86,17 +86,20 @@ class _HomePageState extends State<HomePage> {
                       value: _profitTimeSelected,
                     ),
                   ),
-                  new ListTile(
-                    title: new Text(
-                      '$num',
-                      style: new TextStyle(
-                        fontSize: 32.0,
-                        color: numColor,
-                        fontWeight: FontWeight.bold,
+                  new Padding(
+                    padding: new EdgeInsets.symmetric(vertical: 20.0),
+                    child: new ListTile(
+                      title: new Text(
+                        '$num',
+                        style: new TextStyle(
+                          fontSize: 64.0,
+                          color: numColor,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      subtitle: new Text('Rideshare Profit Estimate'),
                     ),
-                    subtitle: new Text('Rideshare Profit Estimate'),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -145,15 +148,6 @@ class _HomePageState extends State<HomePage> {
                   new Image.asset('assets/heatmap.png'),
                 ],
               ),
-            ),
-          ),
-          new Card(
-            child: new ListTile(
-              title: new Text('Taxes'),
-              onTap: () {
-                Navigator.pushNamed(context, '/taxes');
-              },
-              subtitle: new Text('Monthly estimate? Yearly estimate?'),
             ),
           ),
         ],

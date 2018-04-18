@@ -9,8 +9,8 @@ class AppDrawer extends StatelessWidget {
         children: [
           new DrawerHeader(
             child: new UserAccountsDrawerHeader(
-              accountName: new Text('John Doe'),
-              accountEmail: new Text('john@doe.com'),
+              accountName: new Text('Ubi Uberton'),
+              accountEmail: new Text('ubi@email.com'),
             ),
             padding: EdgeInsets.zero,
           ),
@@ -19,7 +19,7 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, '/home');
             },
-            leading: new Icon(Icons.home),
+            leading: new Icon(Icons.dashboard),
           ),
           new ListTile(
             title: new Text('Transactions'),
@@ -34,6 +34,13 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/banks');
             },
             leading: new Icon(Icons.account_balance),
+          ),
+          new ListTile(
+            title: new Text('Taxes'),
+            onTap: () {
+              Navigator.pushNamed(context, '/taxes');
+            },
+            leading: new Icon(Icons.insert_drive_file),
           ),
           new ListTile(
             title: new Text('Settings'),

@@ -22,7 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
         children: [
           new ListTile(
             title: new Text('Account'),
-            subtitle: new Text('john@doe.com'),
+            subtitle: new Text('ubi@email.com'),
             onTap: () {},
           ),
           new ListTile(
@@ -34,6 +34,16 @@ class _SettingsPageState extends State<SettingsPage> {
             title: new Text('Vehicle'),
             onTap: () {
               Navigator.pushNamed(context, '/vehicle');
+            },
+          ),
+          new ListTile(
+            title: new Text('Sync with Uber'),
+            onTap: () {
+            },
+          ),
+          new ListTile(
+            title: new Text('Sync with Lyft'),
+            onTap: () {
             },
           ),
         ],
