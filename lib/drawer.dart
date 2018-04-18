@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qbse/home.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -18,28 +17,30 @@ class AppDrawer extends StatelessWidget {
           new ListTile(
             title: new Text('Home'),
             onTap: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/home');
             },
+            leading: new Icon(Icons.home),
           ),
           new ListTile(
             title: new Text('Transactions'),
             onTap: () {
               Navigator.pushNamed(context, '/transactions');
             },
+            leading: new Icon(Icons.list),
           ),
           new ListTile(
             title: new Text('Bank Accounts'),
             onTap: () {
               Navigator.pushNamed(context, '/banks');
             },
+            leading: new Icon(Icons.account_balance),
           ),
           new ListTile(
-            title: new Text('Taxes'),
-            onTap: () {},
-          ),
-          new ListTile(
-            title: new Text('Invoices'),
-            onTap: () {},
+            title: new Text('Settings'),
+            leading: new Icon(Icons.settings),
+            onTap: () {
+              Navigator.pushNamed(context, '/settings');
+            },
           ),
         ],
       ),

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 /// Sample ordinal data type.
@@ -22,18 +22,15 @@ final axisSpec = new charts.NumericAxisSpec(
 
 class DayChart extends StatelessWidget {
   final List<charts.Series> seriesList;
-  final bool animate;
 
-  DayChart(this.seriesList, {this.animate});
+  DayChart(this.seriesList);
 
   /// Creates a [BarChart] with sample data and no transition.
   factory DayChart.withSampleData() {
     return new DayChart(
       _createSampleData(),
-      animate: true,
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +38,7 @@ class DayChart extends StatelessWidget {
       seriesList,
       primaryMeasureAxis: axisSpec,
       vertical: false,
-      animate: animate,
+      animate: false,
     );
   }
 
@@ -69,27 +66,23 @@ class DayChart extends StatelessWidget {
 }
 
 /// Example of a line chart rendered with dash patterns.
-class DashPatternLineChart extends StatelessWidget {
+class HourlyAverageChart extends StatelessWidget {
   final List<charts.Series> seriesList;
-  final bool animate;
 
-  DashPatternLineChart(this.seriesList, {this.animate});
+  HourlyAverageChart(this.seriesList);
 
   /// Creates a [LineChart] with sample data and no transition.
-  factory DashPatternLineChart.withSampleData() {
-    return new DashPatternLineChart(
+  factory HourlyAverageChart.withSampleData() {
+    return new HourlyAverageChart(
       _createSampleData(),
-      // Disable animations for image tests.
-      animate: false,
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
     return new charts.LineChart<LinearSales>(
       seriesList,
-      animate: animate,
+      animate: false,
     );
   }
 
@@ -121,7 +114,6 @@ class DashPatternLineChart extends StatelessWidget {
       new LinearSales(20, 6.0),
       new LinearSales(23, 4.0),
     ];
-
 
     return [
       new charts.Series<LinearSales, int>(
