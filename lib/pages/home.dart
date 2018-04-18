@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final profits = [5.21, -0.21, 251.43, 201.90, 1021.10, 1021.50];
+  final profits = [5.21, -0.21, 251.43, 201.90, 285.20, 1021.10, 1021.10, 1021.50];
 
   int _profitTimeSelected = 0;
   int _heatmapSelected = 0;
@@ -62,12 +62,20 @@ class _HomePageState extends State<HomePage> {
                           value: 3,
                         ),
                         new DropdownMenuItem(
-                          child: new Text('This Year'),
+                          child: new Text('This Month'),
                           value: 4,
                         ),
                         new DropdownMenuItem(
-                          child: new Text('All Time'),
+                          child: new Text('3 Months'),
                           value: 5,
+                        ),
+                        new DropdownMenuItem(
+                          child: new Text('This Year'),
+                          value: 6,
+                        ),
+                        new DropdownMenuItem(
+                          child: new Text('All Time'),
+                          value: 7,
                         ),
                       ],
                       onChanged: (selected) {
@@ -87,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: new Text('Profit Estimate'),
+                    subtitle: new Text('Rideshare Profit Estimate'),
                   ),
                 ],
               ),
@@ -104,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                     title: new Text('Current Activity: '),
                     trailing: new Row(
                       children: [
-                        new Text('High'),
+                        new Text('High', style: new TextStyle(fontWeight: FontWeight.bold)),
                         new Icon(Icons.warning, color: Colors.orange),
                       ],
                     ),
@@ -145,6 +153,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.pushNamed(context, '/taxes');
               },
+              subtitle: new Text('Monthly estimate? Yearly estimate?'),
             ),
           ),
         ],

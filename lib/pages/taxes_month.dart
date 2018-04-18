@@ -7,11 +7,22 @@ class TaxMonthPage extends StatefulWidget {
 }
 
 class _TaxMonthPage extends State<TaxMonthPage> {
+  final GlobalKey<ScaffoldState> key = new GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      key: key,
       appBar: new AppBar(
         title: new Text('March 2018 Taxes'),
+        actions: [
+          new IconButton(
+            icon: new Icon(Icons.file_download),
+            onPressed: () {
+              key.currentState.showSnackBar(new SnackBar(content: new Text("Downloading monthly report...")));
+            },
+          ),
+        ],
       ),
       body: new Container(
         child: new Padding(

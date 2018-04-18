@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:qbse/pages/home.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -11,12 +12,29 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  var _cancelAutoTransition = false;
+
   @override
-  void didUpdateWidget(SplashPage oldWidget) {
-    new Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushNamed(context, '/home');
+  void initState() {
+    super.initState();
+    new Future.delayed(const Duration(milliseconds: 2500), () {
+      if (_cancelAutoTransition)
+        return;
+
+      Navigator.push(context, new PageRouteBuilder(
+        opaque: false,
+        transitionDuration: new Duration(milliseconds: 500),
+        pageBuilder: (BuildContext context, _, __) {
+          return new HomePage();
+        },
+        transitionsBuilder: (___, Animation<double> animation, ____, Widget child) {
+          return new FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        }
+      ));
     });
-    super.didUpdateWidget(oldWidget);
   }
 
   @override
@@ -24,6 +42,7 @@ class _SplashPageState extends State<SplashPage> {
     return new Scaffold(
       body: new GestureDetector(
         onTap: () {
+          _cancelAutoTransition = true;
           Navigator.pushNamed(context, '/home');
         },
         child: new Container(

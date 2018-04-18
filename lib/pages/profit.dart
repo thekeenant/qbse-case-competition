@@ -44,12 +44,20 @@ class _ProfitPageState extends State<ProfitPage> {
                   value: 3,
                 ),
                 new DropdownMenuItem(
-                  child: new Text('This Year'),
+                  child: new Text('This Month'),
                   value: 4,
                 ),
                 new DropdownMenuItem(
-                  child: new Text('All Time'),
+                  child: new Text('3 Months'),
                   value: 5,
+                ),
+                new DropdownMenuItem(
+                  child: new Text('This Year'),
+                  value: 6,
+                ),
+                new DropdownMenuItem(
+                  child: new Text('All Time'),
+                  value: 7,
                 ),
               ],
               onChanged: (selected) {

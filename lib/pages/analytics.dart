@@ -59,11 +59,14 @@ class _AnalyticsPageState extends State<AnalyticsPage> {
               ),
             ),
             new AspectRatio(
-              aspectRatio: 2/1,
+              aspectRatio: 2 / 1,
               child: new ReflectionChart(),
             ),
             new ListTile(
-              title: new Text('Top Days', style: new TextStyle(fontWeight: FontWeight.bold)),
+              title: new Text(
+                'Top Days',
+                style: new TextStyle(fontWeight: FontWeight.bold),
+              ),
               subtitle: new Text('Day of Week vs. \$/Hr'),
             ),
             new AspectRatio(
@@ -71,8 +74,10 @@ class _AnalyticsPageState extends State<AnalyticsPage> {
               child: new DayChart.withSampleData(),
             ),
             new ListTile(
-              title:
-                  new Text('Top Times of Day', style: new TextStyle(fontWeight: FontWeight.bold)),
+              title: new Text(
+                'Top Times of Day',
+                style: new TextStyle(fontWeight: FontWeight.bold),
+              ),
               subtitle: new Text('Hour of Day vs. \$/Hr'),
             ),
             new AspectRatio(
@@ -80,11 +85,20 @@ class _AnalyticsPageState extends State<AnalyticsPage> {
               child: new HourlyAverageChart.withSampleData(),
             ),
             new ListTile(
-              title:
-                  new Text('Best Pickup Areas', style: new TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: new Text('Heatmap of hotspots'),
+              title: new Text(
+                'Heatmap',
+                style: new TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: new Text('Best places for rides'),
             ),
             new Image.asset('assets/madison.png'),
+            new ListTile(
+              title: new Text(
+                'Car Model Comparison',
+                style: new TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: new Text('Not done..'),
+            ),
           ],
         ));
   }
