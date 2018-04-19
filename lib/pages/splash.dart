@@ -18,22 +18,22 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     new Future.delayed(const Duration(milliseconds: 2500), () {
-      if (_cancelAutoTransition)
-        return;
+      if (_cancelAutoTransition) return;
 
-      Navigator.push(context, new PageRouteBuilder(
-        opaque: false,
-        transitionDuration: new Duration(milliseconds: 500),
-        pageBuilder: (BuildContext context, _, __) {
-          return new HomePage();
-        },
-        transitionsBuilder: (___, Animation<double> animation, ____, Widget child) {
-          return new FadeTransition(
-            opacity: animation,
-            child: child,
-          );
-        }
-      ));
+      Navigator.push(
+          context,
+          new PageRouteBuilder(
+              opaque: false,
+              transitionDuration: new Duration(milliseconds: 500),
+              pageBuilder: (BuildContext context, _, __) {
+                return new HomePage();
+              },
+              transitionsBuilder: (___, Animation<double> animation, ____, Widget child) {
+                return new FadeTransition(
+                  opacity: animation,
+                  child: child,
+                );
+              }));
     });
   }
 
@@ -53,6 +53,13 @@ class _SplashPageState extends State<SplashPage> {
                 new Image.asset(
                   'assets/qbse_logo.png',
                   width: 200.0,
+                ),
+                new Text(
+                  "Rideshare",
+                  style: new TextStyle(
+                    color: Colors.grey[700],
+                    fontSize: 18.0,
+                  ),
                 ),
                 new Padding(
                   padding: new EdgeInsets.all(20.0),

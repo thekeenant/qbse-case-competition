@@ -18,7 +18,6 @@ class _BankPageState extends State<BankPage> {
       appBar: new AppBar(
         title: new Text('Bank Accounts'),
       ),
-      drawer: new AppDrawer(),
       floatingActionButton: new FloatingActionButton(
         onPressed: () {},
         child: new Icon(Icons.add),

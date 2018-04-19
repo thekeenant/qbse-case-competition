@@ -34,34 +34,39 @@ class _TaxMonthPage extends State<TaxMonthPage> {
                   new Text('Date', style: new TextStyle(fontWeight: FontWeight.bold)),
                   new Text('Income', style: new TextStyle(fontWeight: FontWeight.bold)),
                   new Text('Expenses', style: new TextStyle(fontWeight: FontWeight.bold)),
+                  new Text('Est Tax', style: new TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               new TableRow(
                 children: [
                   new Text('3/1'),
-                  new Text('\$'),
-                  new Text('\$'),
+                  new Text('\$125.00'),
+                  new Text('\$0.00'),
+                  new Text('\$31.25'),
                 ],
               ),
               new TableRow(
                 children: [
                   new Text('3/2'),
-                  new Text('\$'),
-                  new Text('\$'),
+                  new Text('\$80.00'),
+                  new Text('\$42.50'),
+                  new Text('\$9.50'),
                 ],
               ),
               new TableRow(
                 children: [
                   new Text('3/3'),
-                  new Text('\$'),
-                  new Text('\$'),
+                  new Text('\$110.50'),
+                  new Text('\$58.21'),
+                  new Text('\$13.00'),
                 ],
               ),
               new TableRow(
                 children: [
+                  new Text('.'),
                   new Text('..'),
-                  new Text('..'),
-                  new Text('..'),
+                  new Text('...'),
+                  new Text('....'),
                 ],
               ),
             ],

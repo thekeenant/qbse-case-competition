@@ -93,7 +93,6 @@ class _TransactionPageState extends State<TransactionPage> {
             ],
           ),
         ),
-        drawer: new AppDrawer(),
         body: new TabBarView(
           children: [
             new ListView(

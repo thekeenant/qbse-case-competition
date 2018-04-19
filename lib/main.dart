@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:qbse/pages/analytics.dart';
 import 'package:qbse/pages/bank.dart';
 import 'package:qbse/pages/home.dart';
+import 'package:qbse/pages/insights.dart';
+import 'package:qbse/pages/map.dart';
+import 'package:qbse/pages/mileage.dart';
+import 'package:qbse/pages/reports.dart';
 import 'package:qbse/pages/settings.dart';
 import 'package:qbse/pages/splash.dart';
 import 'package:qbse/pages/taxes.dart';
@@ -21,14 +24,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       routes: {
+        '/reports': (_) => new ReportsPage(),
+        '/map': (_) => new MapPage(),
+        '/mileage': (_) => new MileagePage(),
         '/transactions': (_) => new TransactionPage(),
-//        '/profit': (_) => new ProfitPage(),
         '/banks': (_) => new BankPage(),
         '/vehicle': (_) => new VehiclePage(),
         '/taxmonth': (_) => new TaxMonthPage(),
         '/settings': (_) => new SettingsPage(),
         '/home': (_) => new HomePage(),
-        '/analytics': (_) => new AnalyticsPage(),
+        '/insights': (_) => new InsightsPage(),
         '/taxes': (_) => new TaxesPage(),
       },
       home: new SplashPage(),

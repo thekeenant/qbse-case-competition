@@ -161,7 +161,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$0'),
+                  new TextTickLabeler(text: '\$10'),
                 ],
               ),
               new AxisTickData(
@@ -169,7 +169,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$10'),
+                  new TextTickLabeler(text: '\$0'),
                 ],
               ),
               new AxisTickData(
@@ -177,7 +177,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$20'),
+                  new TextTickLabeler(text: '\$10'),
                 ],
               ),
               new AxisTickData(
@@ -185,7 +185,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$30'),
+                  new TextTickLabeler(text: '\$20'),
                 ],
               ),
               new AxisTickData(
@@ -193,7 +193,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$40'),
+                  new TextTickLabeler(text: '\$30'),
                 ],
               ),
               new AxisTickData(
@@ -201,7 +201,7 @@ class ProfitChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$50'),
+                  new TextTickLabeler(text: '\$40'),
                 ],
               ),
             ],
@@ -211,7 +211,7 @@ class ProfitChart extends StatelessWidget {
             offset: 0.0,
             ticks: [
               new AxisTickData(
-                value: 0.0,
+                value: 0.075,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -219,7 +219,7 @@ class ProfitChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.2,
+                value: 0.25,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -227,7 +227,7 @@ class ProfitChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.4,
+                value: 0.425,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -235,7 +235,7 @@ class ProfitChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.6,
+                value: 0.58,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -243,7 +243,7 @@ class ProfitChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.8,
+                value: 0.75,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -251,7 +251,7 @@ class ProfitChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 1.0,
+                value: 0.925,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -263,28 +263,123 @@ class ProfitChart extends StatelessWidget {
         ],
       ),
       charts: [
-        new LineChartData(
-          points: [
-            new LinePointData(x: 0.0, value: 0.0),
-            new LinePointData(x: 0.1, value: 5.2),
-            new LinePointData(x: 0.2, value: 12.5),
-            new LinePointData(x: 0.3, value: 15.5),
-            new LinePointData(x: 0.4, value: 12.5),
-            new LinePointData(x: 0.5, value: 20.5),
-            new LinePointData(x: 0.6, value: 30.5),
-            new LinePointData(x: 0.7, value: 28.5),
-            new LinePointData(x: 0.8, value: 38.5),
-            new LinePointData(x: 0.9, value: 45.5),
-            new LinePointData(x: 1.0, value: 40.5),
+        new BarGraphData(
+          groupWidthFraction: 0.90,
+          groups: [
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.4,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.05,
+                      paint: [
+                        new PaintOptions(color: Colors.red)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.5,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.8,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.3,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 1.0,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.52,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
           ],
-          range: new Range(0.0, 50.0),
-          stroke: new PaintOptions.stroke(color: Colors.green, strokeWidth: 2.0),
         ),
       ],
     );
   }
 }
-
 
 class ReflectionChart extends StatelessWidget {
   @override
@@ -293,6 +388,38 @@ class ReflectionChart extends StatelessWidget {
       animationDuration: const Duration(seconds: 0),
       chartPadding: new EdgeInsets.fromLTRB(40.0, 20.0, 20.0, 40.0),
       decor: new ChartDecor(
+        legend: new LegendData(
+          position: ChartPosition.top,
+          layout: LegendLayout.horizontal,
+          items: [
+            new LegendItemData(
+              symbol: new LegendSquareSymbol(
+                paint: [
+                  new PaintOptions(color: Colors.green)
+                ],
+              ),
+              text: 'Profit',
+            ),
+            new LegendItemData(
+              symbol: new LegendSquareSymbol(
+                paint: [
+                  new PaintOptions(color: Colors.red)
+                ],
+              ),
+              padding: new EdgeInsets.only(left: 10.0),
+              text: 'Loss',
+            ),
+            new LegendItemData(
+              symbol: new LegendSquareSymbol(
+                paint: [
+                  new PaintOptions(color: Colors.blue)
+                ],
+              ),
+              padding: new EdgeInsets.only(left: 10.0),
+              text: 'Acceptable Rate',
+            ),
+          ],
+        ),
         axes: [
           new ChartAxisData(
             position: ChartPosition.left,
@@ -303,7 +430,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$0'),
+                  new TextTickLabeler(text: '\$-100'),
                 ],
               ),
               new AxisTickData(
@@ -311,7 +438,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$100'),
+                  new TextTickLabeler(text: '\$0'),
                 ],
               ),
               new AxisTickData(
@@ -319,7 +446,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$200'),
+                  new TextTickLabeler(text: '\$100'),
                 ],
               ),
               new AxisTickData(
@@ -327,7 +454,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$300'),
+                  new TextTickLabeler(text: '\$200'),
                 ],
               ),
               new AxisTickData(
@@ -335,7 +462,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$400'),
+                  new TextTickLabeler(text: '\$300'),
                 ],
               ),
               new AxisTickData(
@@ -343,7 +470,7 @@ class ReflectionChart extends StatelessWidget {
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
-                  new TextTickLabeler(text: '\$500'),
+                  new TextTickLabeler(text: '\$400'),
                 ],
               ),
             ],
@@ -353,7 +480,7 @@ class ReflectionChart extends StatelessWidget {
             offset: 0.0,
             ticks: [
               new AxisTickData(
-                value: 0.0,
+                value: 0.1,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -361,7 +488,7 @@ class ReflectionChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.2,
+                value: 0.25,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -369,7 +496,7 @@ class ReflectionChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.4,
+                value: 0.425,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -377,7 +504,7 @@ class ReflectionChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.6,
+                value: 0.575,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -385,7 +512,7 @@ class ReflectionChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 0.8,
+                value: 0.75,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -393,7 +520,7 @@ class ReflectionChart extends StatelessWidget {
                 ],
               ),
               new AxisTickData(
-                value: 1.0,
+                value: 0.925,
                 width: 0.2,
                 labelers: [
                   new NotchTickLabeler(),
@@ -405,22 +532,196 @@ class ReflectionChart extends StatelessWidget {
         ],
       ),
       charts: [
-        new LineChartData(
-          points: [
-            new LinePointData(x: 0.0, value: 0.0),
-            new LinePointData(x: 0.1, value: 5.2),
-            new LinePointData(x: 0.2, value: 12.5),
-            new LinePointData(x: 0.3, value: 15.5),
-            new LinePointData(x: 0.4, value: 16.5),
-            new LinePointData(x: 0.5, value: 18.5),
-            new LinePointData(x: 0.6, value: 28.5),
-            new LinePointData(x: 0.7, value: 35.5),
-            new LinePointData(x: 0.8, value: 62.5),
-            new LinePointData(x: 0.9, value: 92.5),
-            new LinePointData(x: 1.0, value: 100.5),
+        new BarGraphData(
+          groupWidthFraction: 0.90,
+          groups: [
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.4,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.3,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7))
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.05,
+                      paint: [
+                        new PaintOptions(color: Colors.red)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.6,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7))
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.65,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.6,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7))
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.85,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.6,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7)),
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.52,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.4,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7))
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
+            new BarGroupData(
+              stackWidthFraction: 0.9,
+              stacks: [
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.52,
+                      paint: [
+                        new PaintOptions(color: Colors.green)
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+                new BarStackData(
+                  bars: [
+                    new BarData(
+                      base: 0.2,
+                      value: 0.4,
+                      paint: [
+                        new PaintOptions(color: Colors.blue.withOpacity(0.7))
+                      ],
+                    ),
+                  ],
+                  range: new Span(0.0, 1.0),
+                  base: 0.2,
+                ),
+              ],
+            ),
           ],
-          range: new Range(0.0, 120.0),
-          stroke: new PaintOptions.stroke(color: Colors.green, strokeWidth: 2.0),
         ),
       ],
     );

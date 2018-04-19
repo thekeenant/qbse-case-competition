@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> key = new GlobalKey();
+
   final profits = [5.21, -0.21, 251.43, 201.90, 285.20, 1021.10, 1021.10, 1021.50];
 
   int _profitTimeSelected = 0;
@@ -23,6 +25,7 @@ class _HomePageState extends State<HomePage> {
     final numColor = profit > 0 ? Colors.green : Colors.red;
 
     return new Scaffold(
+      key: key,
       appBar: new AppBar(
         title: new Text('Home'),
       ),
@@ -107,7 +110,7 @@ class _HomePageState extends State<HomePage> {
           new Card(
             child: new InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/analytics');
+                Navigator.pushNamed(context, '/map');
               },
               child: new Column(
                 children: [

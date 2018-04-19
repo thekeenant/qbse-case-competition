@@ -6,7 +6,8 @@ dependencies:
     sdk: flutter
   charts_flutter: "^0.2.0"
   flutter_webview_plugin: "^0.1.5"
-  fcharts: "^0.0.5"
+  fcharts:
+    path: "../fcharts"
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -30,7 +31,11 @@ flutter:
   assets:
   - assets/heatmap.png
   - assets/madison.png
+  - assets/ubi.png
+  - assets/bigmap.png
+  - assets/legend.png
   - assets/qbse_logo.png
+  - assets/bg.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -102,9 +102,9 @@ packages:
   fcharts:
     dependency: "direct main"
     description:
-      name: fcharts
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "../fcharts"
+      relative: true
+    source: path
     version: "0.0.6"
   flutter:
     dependency: "direct main"

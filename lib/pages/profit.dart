@@ -11,13 +11,17 @@ class ProfitPage extends StatefulWidget {
 }
 
 class _ProfitPageState extends State<ProfitPage> {
+
   _ProfitPageState(this._profitTimeSelected);
+
+  GlobalKey<ScaffoldState> key = new GlobalKey();
 
   int _profitTimeSelected = 0;
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      key: key,
       appBar: new AppBar(
         title: new Text('Profit'),
       ),
@@ -61,9 +65,7 @@ class _ProfitPageState extends State<ProfitPage> {
                 ),
               ],
               onChanged: (selected) {
-                setState(() {
-                  _profitTimeSelected = selected;
-                });
+                key.currentState.showSnackBar(new SnackBar(content: new Text("Not implemented.")));
               },
               value: _profitTimeSelected,
             ),

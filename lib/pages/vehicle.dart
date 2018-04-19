@@ -114,18 +114,27 @@ class _VehiclePageState extends State<VehiclePage> {
               title: new Text('Car purchase price'),
               subtitle: new TextField(
                 keyboardType: TextInputType.number,
+                decoration: new InputDecoration(
+                  hintText: '\$20,320'
+                ),
               ),
             ),
             new ListTile(
               title: new Text('Car purchase year'),
               subtitle: new TextField(
                 keyboardType: TextInputType.number,
+                decoration: new InputDecoration(
+                  hintText: '2017'
+                ),
               ),
             ),
             new ListTile(
               title: new Text('% used for rideshare'),
               subtitle: new TextField(
                 keyboardType: TextInputType.number,
+                decoration: new InputDecoration(
+                  hintText: '50%'
+                ),
               ),
             )
           ],
